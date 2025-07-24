@@ -1,6 +1,6 @@
 ﻿namespace CVTool
 {
-    partial class ImageOperations1img
+    partial class CVMathTwoImg
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,19 +29,31 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            imageBox2 = new Emgu.CV.UI.ImageBox();
-            comboBox1 = new ComboBox();
-            saveFileDialog1 = new SaveFileDialog();
-            openFileDialog1 = new OpenFileDialog();
             imageBox1 = new Emgu.CV.UI.ImageBox();
-            ((System.ComponentModel.ISupportInitialize)imageBox2).BeginInit();
+            imageBox2 = new Emgu.CV.UI.ImageBox();
+            imageBox3 = new Emgu.CV.UI.ImageBox();
+            openFileDialog1 = new OpenFileDialog();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)imageBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imageBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imageBox3).BeginInit();
             SuspendLayout();
+            // 
+            // imageBox1
+            // 
+            imageBox1.BorderStyle = BorderStyle.Fixed3D;
+            imageBox1.Location = new Point(35, 56);
+            imageBox1.Name = "imageBox1";
+            imageBox1.Size = new Size(296, 296);
+            imageBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            imageBox1.TabIndex = 2;
+            imageBox1.TabStop = false;
+            imageBox1.Click += imageBox1_Click;
             // 
             // imageBox2
             // 
             imageBox2.BorderStyle = BorderStyle.Fixed3D;
-            imageBox2.Location = new Point(528, 72);
+            imageBox2.Location = new Point(410, 56);
             imageBox2.Name = "imageBox2";
             imageBox2.Size = new Size(296, 296);
             imageBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -49,52 +61,53 @@
             imageBox2.TabStop = false;
             imageBox2.Click += imageBox2_Click;
             // 
-            // comboBox1
+            // imageBox3
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "NOT", "ROTL", "ROTR" });
-            comboBox1.Location = new Point(365, 205);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.Sorted = true;
-            comboBox1.TabIndex = 7;
-            comboBox1.Text = "Choose Operation";
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            imageBox3.BorderStyle = BorderStyle.Fixed3D;
+            imageBox3.Location = new Point(972, 56);
+            imageBox3.Name = "imageBox3";
+            imageBox3.Size = new Size(296, 296);
+            imageBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            imageBox3.TabIndex = 2;
+            imageBox3.TabStop = false;
+            imageBox3.Click += imageBox3_Click;
             // 
             // openFileDialog1
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
-            // imageBox1
+            // comboBox1
             // 
-            imageBox1.BorderStyle = BorderStyle.Fixed3D;
-            imageBox1.Location = new Point(15, 72);
-            imageBox1.Name = "imageBox1";
-            imageBox1.Size = new Size(296, 296);
-            imageBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            imageBox1.TabIndex = 2;
-            imageBox1.TabStop = false;
-            imageBox1.Click += imageBox1_Click_1;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "AND", "OR", "XOR", "ADD", "SUB", "MUL", "DIV" });
+            comboBox1.Location = new Point(774, 195);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 3;
+            comboBox1.Text = "Choose Operation";
             // 
-            // ImageOperations1img
+            // CVMathTwoImg
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(imageBox1);
             Controls.Add(comboBox1);
+            Controls.Add(imageBox3);
             Controls.Add(imageBox2);
-            Name = "ImageOperations1img";
-            Size = new Size(837, 453);
-            ((System.ComponentModel.ISupportInitialize)imageBox2).EndInit();
+            Controls.Add(imageBox1);
+            Name = "CVMathTwoImg";
+            Size = new Size(1306, 388);
             ((System.ComponentModel.ISupportInitialize)imageBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imageBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imageBox3).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-        private Emgu.CV.UI.ImageBox imageBox2;
-        private ComboBox comboBox1;
-        private SaveFileDialog saveFileDialog1;
-        private OpenFileDialog openFileDialog1;
+
         private Emgu.CV.UI.ImageBox imageBox1;
+        private Emgu.CV.UI.ImageBox imageBox2;
+        private Emgu.CV.UI.ImageBox imageBox3;
+        private OpenFileDialog openFileDialog1;
+        private ComboBox comboBox1;
     }
 }

@@ -28,18 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            cvMathTwoImg1 = new CVMathTwoImg();
             SuspendLayout();
+            // 
+            // cvMathTwoImg1
+            // 
+            cvMathTwoImg1.Location = new Point(12, 12);
+            cvMathTwoImg1.Name = "cvMathTwoImg1";
+            cvMathTwoImg1.Size = new Size(1306, 388);
+            cvMathTwoImg1.TabIndex = 0;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1333, 427);
+            Controls.Add(cvMathTwoImg1);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private CVMathTwoImg cvMathTwoImg1;
     }
 }
