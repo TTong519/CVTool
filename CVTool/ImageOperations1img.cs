@@ -27,20 +27,30 @@ namespace CVTool
         {
             switch (comboBox1.SelectedIndex)
             {
-                case 0: 
+                case 2: 
                     Mat notOutput = new Mat();
                     CvInvoke.BitwiseNot(imageBox1.Image, notOutput);
                     imageBox2.Image = notOutput;
                     break;
-                case 1:
+                case 3:
                     Mat ROTLoutput = new Mat();
                     CvInvoke.Rotate(imageBox1.Image, ROTLoutput, Emgu.CV.CvEnum.RotateFlags.Rotate90CounterClockwise);
                     imageBox2.Image = ROTLoutput;
                     break;
-                case 2:
+                case 4:
                     Mat ROTRoutput = new Mat();
                     CvInvoke.Rotate(imageBox1.Image, ROTRoutput, Emgu.CV.CvEnum.RotateFlags.Rotate90Clockwise);
                     imageBox2.Image = ROTRoutput;
+                    break;
+                case 1:
+                    Mat hsvOutput = new Mat();
+                    CvInvoke.CvtColor(imageBox1.Image, hsvOutput, Emgu.CV.CvEnum.ColorConversion.Rgb2Hsv);
+                    imageBox2.Image = hsvOutput;
+                    break;
+                case 0:
+                    Mat bgrOutput = new Mat();
+                    CvInvoke.CvtColor(imageBox1.Image, bgrOutput, Emgu.CV.CvEnum.ColorConversion.Rgb2Bgr);
+                    imageBox2.Image = bgrOutput;
                     break;
             }
         }

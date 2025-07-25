@@ -52,7 +52,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "NOT", "ROTL", "ROTR" });
+            comboBox1.Items.AddRange(new object[] { "BGR", "HSV", "NOT", "ROTL", "ROTR" });
             comboBox1.Location = new Point(365, 205);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
