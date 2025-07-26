@@ -53,7 +53,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "2DFilter", "Bilateral", "Gaussnian", "Median" });
+            comboBox1.Items.AddRange(new object[] { "2DFilter", "Bilateral", "Gaussnian", "Median", "Stack" });
             comboBox1.Location = new Point(389, 198);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
@@ -80,10 +80,11 @@
             // 
             trackBar1.Location = new Point(315, 367);
             trackBar1.Maximum = 25;
-            trackBar1.Minimum = 3;
+            trackBar1.Minimum = 1;
             trackBar1.Name = "trackBar1";
             trackBar1.Size = new Size(264, 45);
             trackBar1.TabIndex = 11;
+            trackBar1.TickFrequency = 2;
             trackBar1.Value = 3;
             // 
             // Blur

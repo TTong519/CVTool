@@ -51,6 +51,11 @@ namespace CVTool
                     CvInvoke.MedianBlur(imageBox1.Image, outputMedian, trackBar1.Value);
                     imageBox2.Image = outputMedian;
                     break;
+                case 4: // Stack Blur
+                    Mat outputStack = new Mat();
+                    CvInvoke.StackBlur(imageBox1.Image, outputStack, new(trackBar1.Value, trackBar1.Value));
+                    imageBox2.Image = outputStack;
+                    break;
             }
         }
 
