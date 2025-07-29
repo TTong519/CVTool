@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             inRange1 = new InRange();
-            blur1 = new Blur();
+            camera1 = new Camera();
             SuspendLayout();
             // 
             // inRange1
@@ -39,19 +39,19 @@
             inRange1.Size = new Size(1068, 404);
             inRange1.TabIndex = 4;
             // 
-            // blur1
+            // camera1
             // 
-            blur1.Location = new Point(60, 471);
-            blur1.Name = "blur1";
-            blur1.Size = new Size(903, 426);
-            blur1.TabIndex = 5;
+            camera1.Location = new Point(83, 494);
+            camera1.Name = "camera1";
+            camera1.Size = new Size(441, 383);
+            camera1.TabIndex = 5;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1138, 921);
-            Controls.Add(blur1);
+            Controls.Add(camera1);
             Controls.Add(inRange1);
             Name = "Form1";
             Text = "Form1";
@@ -60,6 +60,6 @@
 
         #endregion
         private InRange inRange1;
-        private Blur blur1;
+        private Camera camera1;
     }
 }
