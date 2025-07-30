@@ -91,5 +91,13 @@ namespace CVTool
                 trackBar6.Maximum = 255;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                CvInvoke.Imwrite(saveFileDialog1.FileName + ".png", imageBox2.Image);
+            }
+        }
     }
 }

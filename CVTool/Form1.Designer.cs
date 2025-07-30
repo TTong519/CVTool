@@ -28,38 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            inRange1 = new InRange();
-            camera1 = new Camera();
+            cvMathTwoImg1 = new CVMathTwoImg();
+            imageOperations1img2 = new ImageOperations1img();
             SuspendLayout();
             // 
-            // inRange1
+            // cvMathTwoImg1
             // 
-            inRange1.Location = new Point(60, 61);
-            inRange1.Name = "inRange1";
-            inRange1.Size = new Size(1068, 404);
-            inRange1.TabIndex = 4;
+            cvMathTwoImg1.Location = new Point(12, 35);
+            cvMathTwoImg1.Name = "cvMathTwoImg1";
+            cvMathTwoImg1.Size = new Size(1306, 388);
+            cvMathTwoImg1.TabIndex = 0;
             // 
-            // camera1
+            // imageOperations1img2
             // 
-            camera1.Location = new Point(83, 494);
-            camera1.Name = "camera1";
-            camera1.Size = new Size(441, 383);
-            camera1.TabIndex = 5;
+            imageOperations1img2.Location = new Point(196, 456);
+            imageOperations1img2.Name = "imageOperations1img2";
+            imageOperations1img2.Size = new Size(837, 453);
+            imageOperations1img2.TabIndex = 1;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1138, 921);
-            Controls.Add(camera1);
-            Controls.Add(inRange1);
+            ClientSize = new Size(1323, 921);
+            Controls.Add(imageOperations1img2);
+            Controls.Add(cvMathTwoImg1);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
         }
 
         #endregion
-        private InRange inRange1;
-        private Camera camera1;
+        private ImageOperations1img imageOperations1img1;
+        private CVMathTwoImg cvMathTwoImg1;
+        private ImageOperations1img imageOperations1img2;
     }
 }

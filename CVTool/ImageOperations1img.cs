@@ -27,17 +27,17 @@ namespace CVTool
         {
             switch (comboBox1.SelectedIndex)
             {
-                case 2: 
+                case 3:
                     Mat notOutput = new Mat();
                     CvInvoke.BitwiseNot(imageBox1.Image, notOutput);
                     imageBox2.Image = notOutput;
                     break;
-                case 3:
+                case 4:
                     Mat ROTLoutput = new Mat();
                     CvInvoke.Rotate(imageBox1.Image, ROTLoutput, Emgu.CV.CvEnum.RotateFlags.Rotate90CounterClockwise);
                     imageBox2.Image = ROTLoutput;
                     break;
-                case 4:
+                case 5:
                     Mat ROTRoutput = new Mat();
                     CvInvoke.Rotate(imageBox1.Image, ROTRoutput, Emgu.CV.CvEnum.RotateFlags.Rotate90Clockwise);
                     imageBox2.Image = ROTRoutput;
@@ -52,6 +52,11 @@ namespace CVTool
                     CvInvoke.CvtColor(imageBox1.Image, bgrOutput, Emgu.CV.CvEnum.ColorConversion.Rgb2Bgr);
                     imageBox2.Image = bgrOutput;
                     break;
+                case 2:
+                    Mat grayOutput = new Mat();
+                    CvInvoke.CvtColor(imageBox1.Image, grayOutput, Emgu.CV.CvEnum.ColorConversion.Gray2Rgb);
+                    imageBox2.Image = grayOutput;
+                    break;
             }
         }
 
@@ -61,6 +66,14 @@ namespace CVTool
             {
                 Bitmap bitmap = new Bitmap(openFileDialog1.FileName);
                 imageBox1.Image = bitmap.ToMat();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                CvInvoke.Imwrite(saveFileDialog1.FileName + ".png", imageBox2.Image);
             }
         }
     }

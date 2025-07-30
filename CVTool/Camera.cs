@@ -18,7 +18,7 @@ namespace CVTool
     {
 
         VideoCapture capture = new VideoCapture();
-
+        
         public void GetFrame(object sender, EventArgs e)
         {
 
@@ -38,13 +38,14 @@ namespace CVTool
         private void Camera_Load(object sender, EventArgs e)
         {
             Application.Idle += GetFrame;
+            saveFileDialog1.AddExtension = true;
         }
 
         private void imageBox1_Click(object sender, EventArgs e)
         {
             if(saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                CvInvoke.Imwrite(saveFileDialog1.FileName, imageBox1.Image);
+                CvInvoke.Imwrite(saveFileDialog1.FileName + ".png", imageBox1.Image);
             }
         }
     }

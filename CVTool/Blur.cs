@@ -38,7 +38,7 @@ namespace CVTool
                     break;
                 case 1: // Bilateral Filter
                     Mat outputBilateral = new Mat();
-                    CvInvoke.BilateralFilter(imageBox1.Image, outputBilateral, trackBar1.Value, trackBar1.Value*5, trackBar1.Value*5);
+                    CvInvoke.BilateralFilter(imageBox1.Image, outputBilateral, trackBar1.Value, trackBar1.Value * 5, trackBar1.Value * 5);
                     imageBox2.Image = outputBilateral;
                     break;
                 case 2: // Gaussian Filter
@@ -62,6 +62,14 @@ namespace CVTool
         private void Blur_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                CvInvoke.Imwrite(saveFileDialog1.FileName + ".png", imageBox2.Image);
+            }
         }
     }
 }

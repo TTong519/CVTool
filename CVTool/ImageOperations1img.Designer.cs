@@ -34,6 +34,7 @@
             saveFileDialog1 = new SaveFileDialog();
             openFileDialog1 = new OpenFileDialog();
             imageBox1 = new Emgu.CV.UI.ImageBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)imageBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imageBox1).BeginInit();
             SuspendLayout();
@@ -52,7 +53,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "BGR", "HSV", "NOT", "ROTL", "ROTR" });
+            comboBox1.Items.AddRange(new object[] { "BGR", "G-RGB", "HSV", "NOT", "ROTL", "ROTR" });
             comboBox1.Location = new Point(365, 205);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
@@ -76,10 +77,21 @@
             imageBox1.TabStop = false;
             imageBox1.Click += imageBox1_Click_1;
             // 
+            // button1
+            // 
+            button1.Location = new Point(528, 28);
+            button1.Name = "button1";
+            button1.Size = new Size(296, 23);
+            button1.TabIndex = 8;
+            button1.Text = "Save";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // ImageOperations1img
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button1);
             Controls.Add(imageBox1);
             Controls.Add(comboBox1);
             Controls.Add(imageBox2);
@@ -96,5 +108,6 @@
         private SaveFileDialog saveFileDialog1;
         private OpenFileDialog openFileDialog1;
         private Emgu.CV.UI.ImageBox imageBox1;
+        private Button button1;
     }
 }

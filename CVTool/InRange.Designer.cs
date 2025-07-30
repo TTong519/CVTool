@@ -41,6 +41,8 @@
             trackBar4 = new TrackBar();
             trackBar5 = new TrackBar();
             trackBar6 = new TrackBar();
+            button2 = new Button();
+            saveFileDialog1 = new SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)imageBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).BeginInit();
@@ -164,10 +166,21 @@
             trackBar6.TabIndex = 11;
             trackBar6.TickFrequency = 5;
             // 
+            // button2
+            // 
+            button2.Location = new Point(747, 354);
+            button2.Name = "button2";
+            button2.Size = new Size(296, 27);
+            button2.TabIndex = 12;
+            button2.Text = "Save";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // InRange
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button2);
             Controls.Add(trackBar6);
             Controls.Add(trackBar5);
             Controls.Add(trackBar4);
@@ -207,5 +220,7 @@
         private TrackBar trackBar4;
         private TrackBar trackBar5;
         private TrackBar trackBar6;
+        private Button button2;
+        private SaveFileDialog saveFileDialog1;
     }
 }

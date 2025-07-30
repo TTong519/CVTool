@@ -34,6 +34,8 @@
             imageBox2 = new Emgu.CV.UI.ImageBox();
             openFileDialog1 = new OpenFileDialog();
             trackBar1 = new TrackBar();
+            button = new Button();
+            saveFileDialog1 = new SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)imageBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imageBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
@@ -87,10 +89,21 @@
             trackBar1.TickFrequency = 2;
             trackBar1.Value = 3;
             // 
+            // button
+            // 
+            button.Location = new Point(552, 17);
+            button.Name = "button";
+            button.Size = new Size(296, 23);
+            button.TabIndex = 12;
+            button.Text = "Save";
+            button.UseVisualStyleBackColor = true;
+            button.Click += button_Click;
+            // 
             // Blur
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button);
             Controls.Add(trackBar1);
             Controls.Add(imageBox1);
             Controls.Add(comboBox1);
@@ -112,5 +125,7 @@
         private Emgu.CV.UI.ImageBox imageBox2;
         private OpenFileDialog openFileDialog1;
         private TrackBar trackBar1;
+        private Button button;
+        private SaveFileDialog saveFileDialog1;
     }
 }
