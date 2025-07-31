@@ -42,10 +42,16 @@ namespace CVTool
             {
                 Mat output = new Mat();
                 Mat temp = new Mat();
-                CvInvoke.CvtColor(imageBox1.Image, temp, Emgu.CV.CvEnum.ColorConversion.Rgb2Bgr);
+                CvInvoke.CvtColor(imageBox1.Image, temp, Emgu.CV.CvEnum.ColorConversion.Rgb2Hsv);
                 CvInvoke.InRange(temp, (ScalarArray)new MCvScalar(trackBar1.Value, trackBar2.Value, trackBar3.Value), (ScalarArray)new MCvScalar(trackBar4.Value, trackBar5.Value, trackBar6.Value), output);
                 imageBox2.Image = output;
             }
+            label1.Text = trackBar1.Value.ToString();
+            label2.Text = trackBar2.Value.ToString();
+            label3.Text = trackBar3.Value.ToString();
+            label4.Text = trackBar4.Value.ToString();
+            label5.Text = trackBar5.Value.ToString();
+            label6.Text = trackBar6.Value.ToString();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
