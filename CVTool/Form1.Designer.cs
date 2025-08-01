@@ -28,31 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            cvMathTwoImg1 = new CVMathTwoImg();
-            inRange1 = new InRange();
+            diff1 = new Diff();
             SuspendLayout();
             // 
-            // cvMathTwoImg1
+            // diff1
             // 
-            cvMathTwoImg1.Location = new Point(12, 35);
-            cvMathTwoImg1.Name = "cvMathTwoImg1";
-            cvMathTwoImg1.Size = new Size(1306, 388);
-            cvMathTwoImg1.TabIndex = 0;
-            // 
-            // inRange1
-            // 
-            inRange1.Location = new Point(163, 429);
-            inRange1.Name = "inRange1";
-            inRange1.Size = new Size(1068, 404);
-            inRange1.TabIndex = 1;
+            diff1.Location = new Point(62, 149);
+            diff1.Name = "diff1";
+            diff1.Size = new Size(1071, 700);
+            diff1.TabIndex = 1;
+            diff1.Load += diff1_Load;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1323, 921);
-            Controls.Add(inRange1);
-            Controls.Add(cvMathTwoImg1);
+            Controls.Add(diff1);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -60,7 +52,6 @@
 
         #endregion
         private ImageOperations1img imageOperations1img1;
-        private CVMathTwoImg cvMathTwoImg1;
-        private InRange inRange1;
+        private Diff diff1;
     }
 }

@@ -6,5 +6,10 @@ namespace CVTool
         {
             InitializeComponent();
         }
+
+        private void diff1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
